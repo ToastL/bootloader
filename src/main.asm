@@ -6,7 +6,7 @@ mov bx, 0x9000
 mov dh, 2
 call disk_load
 
-mov dx, [0x9000]
+mov dh, [0x9000]
 call print_hex
 
 call print_nl

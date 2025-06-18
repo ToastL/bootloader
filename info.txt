@@ -1,0 +1,23 @@
+registers:
+ax  - ah/al - Math, Return values
+bx  - bh/bl - Address base
+cx  - ch/cl - Loop counters
+dx  - dh/dl - I/O, Extended math
+si  - n/a   - Source index for memory
+di  - n/a   - Destination index for memory
+sp  - n/a   - Stack pointer
+bp  - n/a   - Stack frame reference
+ip  - n/a   - Instruction pointer
+
+interupts:
+
+0x10: output character
+    - ah: function
+    - al: character to output
+
+0x13: read/write disk
+    - ah: function
+    - al: number of sectors
+    - cl: starting sector
+    - ch: cylinder?
+    - dh: header?
