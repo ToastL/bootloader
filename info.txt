@@ -9,6 +9,13 @@ sp  - n/a   - Stack pointer
 bp  - n/a   - Stack frame reference
 ip  - n/a   - Instruction pointer
 
+cs  - n/a   - Code Segment
+ds  - n/a   - Data Segment
+es  - n/a   - Extra Segment
+ss  - n/a   - Stack Segment
+fs  - n/a   - FS Segment
+gs  - n/a   - GS Segment
+
 interupts:
 
 0x10: output character
@@ -18,6 +25,8 @@ interupts:
 0x13: read/write disk
     - ah: function
     - al: number of sectors
+    - bx: offset
     - cl: starting sector
     - ch: cylinder?
     - dh: header?
+    - dl: drive
